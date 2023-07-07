@@ -1,0 +1,166 @@
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left"
+    style="display:none; background-color: #3c1f42; width: 22%;" id="leftMenu">
+    <button style="background-color:#3c1f42; border: none; margin-top: 4px;" onclick="closeLeftMenu()" type="button"
+        class="btn btn-light"><span data-v-d9aeee20="" class="close"><svg data-v-758e0345="" data-v-d9aeee20=""
+                width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="icon-color--smoke" style="color: white;">
+                <path data-v-758e0345="" d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                <path data-v-758e0345="" d="M18 18L6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+            </svg></span></button>
+    <br>
+
+    <% if (locals.isLoggedIn) { %>
+    <div data-v-4b885054="" data-v-dc8c466c="" class="auth-intro">
+        <div data-v-fb413fbc="" data-v-4b885054="" class="account-sign-up-advantage">
+            <div data-v-fb413fbc="" class="account-sign-up-advantage__title"
+                style="color: white; font-size: medium!important;">Hai <%= user.name %>!
+            </div>
+            <div data-v-fb413fbc="" class="account-sign-up-advantage__content">
+
+            </div>
+        </div>
+        <div data-v-4b885054="" class="auth-intro__buttons">
+            <a href="profil">
+                <button data-v-e97de1be="" data-v-4b885054="" type="button" class=" btn-default btn-single">Riwayat
+                    Transaksi</button>
+            </a>
+
+            <a href="/auth/logout" style="text-decoration: none !important;;">
+                <button data-v-e97de1be="" data-v-4b885054="" type="button" class=" btn-negative btn-single"> Keluar
+                </button>
+            </a>
+        </div>
+    </div>
+    <% } else { %>
+    <div data-v-4b885054="" data-v-dc8c466c="" class="auth-intro">
+        <div data-v-fb413fbc="" data-v-4b885054="" class="account-sign-up-advantage">
+            <div data-v-fb413fbc="" class="account-sign-up-advantage__title" style="color: white;">
+                Daftar Codashop sekarang!</div>
+            <div data-v-fb413fbc="" class="account-sign-up-advantage__content">
+                <div data-v-fb413fbc="" class="list-item"><svg data-v-fb413fbc="" width="28" height="28"
+                        viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" class="list-item-icon">
+                        <path
+                            d="M5.59332 8.23178C5.59332 6.77462 6.77515 5.59278 8.23115 5.59278H9.43165C10.127 5.59278 10.7955 5.31745 11.2902 4.82628L12.129 3.98628C13.1568 2.95378 14.8275 2.94912 15.86 3.97695L15.8705 3.98628L16.7105 4.82628C17.204 5.31745 17.8725 5.59278 18.569 5.59278H19.7683C21.2255 5.59278 22.4073 6.77462 22.4073 8.23178V9.42995C22.4073 10.1276 22.6827 10.795 23.1738 11.2896L24.0138 12.1296C25.0463 13.1575 25.0522 14.827 24.0243 15.8606L24.0138 15.8711L23.1738 16.7111C22.6827 17.2035 22.4073 17.8731 22.4073 18.5685V19.769C22.4073 21.2261 21.2255 22.4068 19.7683 22.4068H18.569C17.8725 22.4068 17.204 22.6833 16.7105 23.1745L15.8705 24.0133C14.8438 25.047 13.1732 25.0516 12.1395 24.0238C12.136 24.0203 12.1325 24.0168 12.129 24.0133L11.2902 23.1745C10.7955 22.6833 10.127 22.4068 9.43165 22.4068H8.23115C6.77515 22.4068 5.59332 21.2261 5.59332 19.769V18.5685C5.59332 17.8731 5.31682 17.2035 4.82565 16.7111L3.98682 15.8711C2.95315 14.8433 2.94849 13.1726 3.97632 12.1401L3.98682 12.1296L4.82565 11.2896C5.31682 10.795 5.59332 10.1276 5.59332 9.42995V8.23178"
+                            stroke="#E8F953" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M11.0016 16.9976L16.9983 11.001" stroke="#E8F953" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path
+                            d="M16.9945 17.876C16.7612 17.876 16.5395 17.7827 16.3762 17.6194C16.2945 17.5377 16.2362 17.4327 16.1895 17.3277C16.1428 17.2227 16.1195 17.1189 16.1195 17.001C16.1195 16.8844 16.1428 16.7677 16.1895 16.6627C16.2362 16.5577 16.2945 16.4644 16.3762 16.3827C16.7028 16.056 17.2862 16.056 17.6128 16.3827C17.6945 16.4644 17.7645 16.5577 17.8112 16.6627C17.8462 16.7677 17.8695 16.8844 17.8695 17.001C17.8695 17.1189 17.8462 17.2227 17.8112 17.3277C17.7645 17.4327 17.6945 17.5377 17.6128 17.6194C17.4495 17.7827 17.2278 17.876 16.9945 17.876Z"
+                            fill="#E8F953"></path>
+                        <path
+                            d="M10.9977 11.8798C10.881 11.8798 10.776 11.8553 10.671 11.8087C10.566 11.762 10.461 11.7048 10.3793 11.6232C10.2977 11.5298 10.2393 11.4365 10.1927 11.3315C10.146 11.2253 10.1227 11.1215 10.1227 11.0048C10.1227 10.887 10.146 10.7715 10.1927 10.6665C10.2393 10.5615 10.2977 10.4565 10.3793 10.3865C10.7177 10.0587 11.2893 10.0587 11.616 10.3865C11.7793 10.5487 11.8727 10.7715 11.8727 11.0048C11.8727 11.1215 11.861 11.2253 11.8143 11.3315C11.7677 11.4365 11.6977 11.5298 11.616 11.6232C11.5343 11.7048 11.441 11.762 11.336 11.8087C11.231 11.8553 11.1143 11.8798 10.9977 11.8798Z"
+                            fill="#E8F953"></path>
+                    </svg><span data-v-fb413fbc="" class="list-item-text" style="color: white;"> Jadilah yang pertama
+                        mengetahui promo dan
+                        penawaran ekslusif! </span></div>
+                <div data-v-fb413fbc="" class="list-item"><svg data-v-fb413fbc="" width="28" height="28"
+                        viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" class="list-item-icon">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M13.6089 21.737L6.68903 25.528C6.13653 25.8152 5.45587 25.6119 5.15128 25.0688V25.0688C5.06315 24.9006 5.01561 24.7141 5.01245 24.5242V7.72634C5.01245 4.52268 7.20162 3.24121 10.3519 3.24121H17.7523C20.8065 3.24121 23.0918 4.43724 23.0918 7.51276V24.5242C23.0918 24.8272 22.9714 25.1179 22.7571 25.3322C22.5428 25.5465 22.2522 25.6668 21.9491 25.6668C21.7558 25.6638 21.5658 25.6163 21.3938 25.528L14.4312 21.737C14.1746 21.5984 13.8655 21.5984 13.6089 21.737Z"
+                            stroke="#E8F953" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M9.76453 10.8767H18.2756" stroke="#E8F953" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg><span data-v-fb413fbc="" class="list-item-text" style="color: white;"> Akses riwayat pesanan
+                        anda dengan mudah
+                    </span></div>
+                <div data-v-fb413fbc="" class="list-item"><svg data-v-fb413fbc="" width="28" height="28"
+                        viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" class="list-item-icon">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M22.0092 5.97777C22.519 6.15627 22.8597 6.63694 22.8597 7.1771V15.0789C22.8597 17.2874 22.057 19.3956 20.6395 21.0289C19.9267 21.8514 19.0249 22.4919 18.067 23.0099L13.916 25.2523L9.75804 23.0088C8.79904 22.4908 7.89604 21.8514 7.18204 21.0278C5.76337 19.3944 4.95837 17.2851 4.95837 15.0743V7.1771C4.95837 6.63694 5.29904 6.15627 5.80887 5.97777L13.4879 3.27927C13.7609 3.1836 14.0584 3.1836 14.3302 3.27927L22.0092 5.97777Z"
+                            stroke="#E8F953" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M10.8763 13.9041L13.0837 16.1126L17.6313 11.5649" stroke="#E8F953" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg><span data-v-fb413fbc="" class="list-item-text" style="color: white;"> Lebih cepat dan aman
+                    </span></div>
+            </div>
+        </div>
+        <div data-v-4b885054="" class="auth-intro__buttons">
+            <a href="register">
+                <button data-v-e97de1be="" data-v-4b885054="" type="button" class=" btn-default btn-single">Daftar
+                    sekarang, gratis</button>
+            </a>
+
+            <a href="login" style="text-decoration: none !important;;">
+                <button data-v-e97de1be="" data-v-4b885054="" type="button" class=" btn-negative btn-single"> Masuk
+                </button>
+            </a>
+        </div>
+    </div>
+    <% } %>
+    <!--  -->
+
+    <!--  -->
+</div>
+<div class="cmb-header-shadow" id="navbar">
+    <div class="container">
+        <header class="d-flex align-items-center justify-content-center justify-content-md-between py-0">
+            <!-- logo -->
+            <div class="d-flex align-items-center">
+                <button style="background-color: #3c1f42;" class="btn" type="button"><img
+                        src="assets/images/logo/bars.png" class="logo" alt=".." height="25"
+                        onclick="openLeftMenu()"></button>
+                <a class="align-items-right" href="/">
+                    <img src="assets/images/logo/coda.png" class="logo" alt=".." height="23">
+                </a>
+
+            </div>
+            <!-- end logo -->
+
+            <!-- button masuk/daftar -->
+            <% if (locals.isLoggedIn) { %>
+            <div class="text-end" style="width: 100%;">
+                <!-- search -->
+                <a style="margin: 5px;">
+                    <img src="assets/images/logo/search.png" alt=".." width="20">
+                </a>
+                <!--  -->
+
+                <!-- notif -->
+                <a style="margin: 5px;">
+                    <svg data-v-3b825b95="" data-v-2b3aa90e="" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" class="">
+                        <path data-v-3b825b95="" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3.50083 13.7871V13.5681C3.53295 12.9202 3.7406 12.2925 4.10236 11.7496C4.7045 11.0975 5.1167 10.2983 5.29571 9.43598C5.29571 8.7695 5.29571 8.0935 5.35393 7.42703C5.65469 4.21842 8.82728 2 11.9611 2H12.0387C15.1725 2 18.345 4.21842 18.6555 7.42703C18.7137 8.0935 18.6555 8.7695 18.704 9.43598C18.8854 10.3003 19.2972 11.1019 19.8974 11.7591C20.2618 12.2972 20.4698 12.9227 20.4989 13.5681V13.7776C20.5206 14.648 20.2208 15.4968 19.6548 16.1674C18.907 16.9515 17.8921 17.4393 16.8024 17.5384C13.607 17.8812 10.383 17.8812 7.18762 17.5384C6.09914 17.435 5.08576 16.9479 4.33521 16.1674C3.778 15.4963 3.48224 14.6526 3.50083 13.7871Z"
+                            stroke="#EAE8F7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path data-v-3b825b95=""
+                            d="M9.55493 20.8516C10.0542 21.4782 10.7874 21.8838 11.5922 21.9785C12.3971 22.0732 13.2072 21.8493 13.8433 21.3562C14.0389 21.2103 14.2149 21.0408 14.3672 20.8516"
+                            stroke="#EAE8F7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <circle data-v-3b825b95="" cx="18" cy="5" r="3.5" fill="#F84771" stroke="#381B42"></circle>
+                    </svg>
+                </a>
+
+            </div>
+            <% } else { %>
+
+            <div class="text-end" style="width: 100%;">
+                <!-- search -->
+                <a style="margin: 5px;">
+                    <img src="assets/images/logo/search.png" alt=".." width="20">
+                </a>
+                <!--  -->
+
+                <!-- notif -->
+                <a style="margin: 5px;">
+                    <svg data-v-3b825b95="" data-v-2b3aa90e="" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" class="">
+                        <path data-v-3b825b95="" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3.50083 13.7871V13.5681C3.53295 12.9202 3.7406 12.2925 4.10236 11.7496C4.7045 11.0975 5.1167 10.2983 5.29571 9.43598C5.29571 8.7695 5.29571 8.0935 5.35393 7.42703C5.65469 4.21842 8.82728 2 11.9611 2H12.0387C15.1725 2 18.345 4.21842 18.6555 7.42703C18.7137 8.0935 18.6555 8.7695 18.704 9.43598C18.8854 10.3003 19.2972 11.1019 19.8974 11.7591C20.2618 12.2972 20.4698 12.9227 20.4989 13.5681V13.7776C20.5206 14.648 20.2208 15.4968 19.6548 16.1674C18.907 16.9515 17.8921 17.4393 16.8024 17.5384C13.607 17.8812 10.383 17.8812 7.18762 17.5384C6.09914 17.435 5.08576 16.9479 4.33521 16.1674C3.778 15.4963 3.48224 14.6526 3.50083 13.7871Z"
+                            stroke="#EAE8F7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path data-v-3b825b95=""
+                            d="M9.55493 20.8516C10.0542 21.4782 10.7874 21.8838 11.5922 21.9785C12.3971 22.0732 13.2072 21.8493 13.8433 21.3562C14.0389 21.2103 14.2149 21.0408 14.3672 20.8516"
+                            stroke="#EAE8F7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <circle data-v-3b825b95="" cx="18" cy="5" r="3.5" fill="#F84771" stroke="#381B42"></circle>
+                    </svg>
+                </a>
+                <a href="register" class="btn log-img"
+                    style="color: white; background-color: #6242fc;border-radius: 20px; margin: 5px;width: 12%;">Daftar</a>
+
+            </div>
+            <% } %>
+
+            <!-- end button -->
+        </header>
+    </div>
+</div>
